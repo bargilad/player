@@ -1,0 +1,8 @@
+<div class="player">
+  <youtube-player #player
+                  id="player"
+                  [playerVars]="playerParameters"
+                  (stateChange)="onStateChanged($event)"
+                  (ready)="onPlayerIsReady($event)"
+  ></youtube-player>
+</div>

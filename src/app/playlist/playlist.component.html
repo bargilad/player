@@ -1,0 +1,19 @@
+<div class="playlist">
+  <app-search-box class="search-song-field"></app-search-box>
+  <div class="playlist-content" >
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)"
+         class="songs-list" *ngIf="playlistSongs.length> 0" id="playlist">
+      <div class="example-box" *ngFor="let song of playlistSongs" class="list-item" cdkDrag>
+        <span class="song-details">
+        <span matLine class="song-name"> {{song.name}} </span>
+        <span matLine class="song-duration"> {{song.duration}} </span>
+      </span>
+        <button mat-mini-fab color="primary" (click)="removeSong(song)">
+          <mat-icon>remove_from_queue</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <img id="no-songs-on-playlist" *ngIf="playlistSongs.length === 0" class="noResultsPic" src="assets/images/no-results.png">
+  </div>
+</div>

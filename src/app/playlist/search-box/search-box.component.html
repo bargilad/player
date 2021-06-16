@@ -1,0 +1,15 @@
+<div class="search-box">
+  <mat-form-field appearance="fill" class="search-song-field" id="search-field">
+    <input
+      matInput
+      placeholder="Enter video URL"
+      class="input"
+      autocomplete="off"
+      id="search-box"
+      [(ngModel)]="songURL"
+    >
+    <button mat-mini-fab matSuffix (click)="addSongToPlaylist()" id="search-btn">
+      <mat-icon>add_to_queue</mat-icon>
+    </button>
+  </mat-form-field>
+</div>

@@ -1,0 +1,37 @@
+.playlist{
+  padding: 10px 20px;
+
+  .playlist-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .noResultsPic{
+      width: 300px;
+      height: 200px;
+    }
+    .songs-list{
+      overflow-y: auto;
+      width: 100%;
+      padding-left: 15px;
+      .list-item{
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 10px;
+        .song-details{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          padding-right: 27px;
+          align-items: center;
+          .song-name{
+            text-overflow: ellipsis
+          }
+        }
+      }
+    }
+  }
+}
