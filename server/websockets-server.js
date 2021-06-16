@@ -11,7 +11,6 @@ const EMessageTypes_ReplaceList = 'ReplaceList';
 
 
 wsServer.on('connection', socket => {
-  //verify close connection
   socketsList.push(socket);
   socket.send(JSON.stringify({requestType: 'init', songs: arrayOfSongs}));
   socket.on('message',msg => handleMessage(msg));
